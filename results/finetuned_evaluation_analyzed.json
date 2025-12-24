@@ -1,0 +1,34 @@
+{
+  "timestamp": "2025-12-21T14:09:39.839706",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3 + LoRA",
+  "test_set_size": 100,
+  "parseable_outputs": 33,
+  "unparseable_outputs": 67,
+  "metrics_on_parseable": {
+    "accuracy": 0.939,
+    "precision": 0.939,
+    "recall": 1.0,
+    "f1_score": 0.969,
+    "confusion_matrix": {
+      "true_positives": 31,
+      "true_negatives": 0,
+      "false_positives": 2,
+      "false_negatives": 0
+    }
+  },
+  "baseline_comparison": {
+    "baseline_accuracy": 0.6,
+    "baseline_precision": 0.467,
+    "baseline_recall": 1.0,
+    "baseline_f1": 0.636
+  },
+  "error_analysis": {
+    "false_positives": [
+      {"application_id": "APP-0151", "risk_score": 10, "note": "Borderline case"},
+      {"application_id": "APP-0276", "risk_score": 20, "note": "Borderline case"}
+    ],
+    "false_negatives": [],
+    "unparseable_pattern": "Model outputs verbose explanations for NO_DEFAULT cases instead of clean labels"
+  },
+  "notes": "67 of 100 test outputs were unparseable (model gave explanations instead of labels). Metrics calculated on 33 parseable outputs. All parseable outputs were DEFAULT predictions - model learned to be concise for DEFAULT, verbose for NO_DEFAULT. This is a common fine-tuning artifact that could be fixed with output formatting constraints."
+}

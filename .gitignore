@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+
+# Claude local settings
+.claude/
+
+# Internal project files (contain employer references or redundant)
+PROJECT_LOG.md
+PROJECT_PAGE.md
+NORTH_STAR.md
+2025-12-23-creditnlp.md
+
+# Presentation folder (internal use only)
+presentation/
+
+# Models - host on HuggingFace instead of GitHub
+models/*.safetensors
+models/*.bin
+models/*.pt
+models/*.zip
+models/tokenizer*
+models/chat_template.jinja
+models/special_tokens_map.json
+
+# Environment
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db

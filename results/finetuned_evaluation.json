@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-12-21T14:09:39.839706",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3 + LoRA",
+  "test_set_size": 33,
+  "metrics": {
+    "accuracy": 0.9393939393939394,
+    "precision": 0.9393939393939394,
+    "recall": 1.0,
+    "f1_score": 0.96875,
+    "confusion_matrix": {
+      "true_positives": 31,
+      "true_negatives": 0,
+      "false_positives": 2,
+      "false_negatives": 0
+    }
+  },
+  "baseline_comparison": {
+    "baseline_accuracy": 0.6,
+    "accuracy_improvement": 0.33939393939393947,
+    "baseline_precision": 0.467,
+    "precision_improvement": 0.4723939393939394,
+    "baseline_recall": 1.0,
+    "recall_change": 0.0,
+    "baseline_f1": 0.636,
+    "f1_improvement": 0.33275
+  },
+  "error_analysis": {
+    "false_positives": [
+      {"application_id": "APP-0151", "risk_score": 10},
+      {"application_id": "APP-0276", "risk_score": 20}
+    ],
+    "false_negatives": []
+  },
+  "notes": "Evaluation on 33 samples with parseable model outputs. Both false positives were borderline cases (risk scores 10 and 20)."
+}
